@@ -1,0 +1,51 @@
+<div class="bar bar-subfooter" ng-controller="subfoot">
+	<button class="button" ng-click="showNoSTNK()">+ STNK</button>
+	<button class="button" ng-click="showNoSIM()">+ SIM</button>
+</div>
+<div id="nostnk" class="inpbar bar bar-subfooter" ng-controller="subfoot">
+	<input type="text" placeholder="Nomor STNK"></input>
+	<button class="button" ng-click="simpanNoSTNK()">Simpan STNK</button>
+</div>
+<div id="nosim" class="inpbar bar bar-subfooter" ng-controller="subfoot">
+	<input type="text" placeholder="Nomor SIM"></input>
+	<button class="button" ng-click="simpanNoSIM()">Simpan SIM</button>
+</div>
+<ion-view title="Surat-Surat">
+  <ion-content class="has-subfooter" ng-controller="MyCtrl">
+  <!--
+    <ion-list>
+      <ion-item type="item-text-wrap">STNK</ion-item>
+      <ion-item ng-repeat="stnk in stnks" type="item-text-wrap" href="#/tab/friend/{{stnk.id}}">
+        {{stnk.name}}
+      </ion-item>
+      <ion-item type="item-text-wrap">SIM</ion-item>
+      <ion-item ng-repeat="sim in sims" type="item-text-wrap" href="#/tab/friend/{{sim.id}}">
+        {{sim.name}}
+      </ion-item>
+    </ion-list>
+	-->
+	<ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable nomargin"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)"
+                    href="#/tab/surat/{{group.name}}/{{item.id}}">
+            <img src="img/truck.png">
+	      <div class="acc-desc">
+		      <h1>{{item.name}}</h1>
+		      <h2>Valid until: {{item.name}}</h2>
+	      </div>
+	      <img class="floatright" src="img/expand.png">
+            
+          </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+</ion-view>

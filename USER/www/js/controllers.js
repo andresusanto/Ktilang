@@ -17,18 +17,98 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('FriendsCtrl', function($scope, Stnks, Sims) {
+  $scope.stnks = Stnks.all();
+  $scope.sims = Sims.all();
 }) 
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('STNKDetailCtrl', function($scope, $stateParams, Stnks) {
+  $scope.item = Stnks.get($stateParams.itemId);
+})
+
+.controller('SIMDetailCtrl', function($scope, $stateParams, Sims) {
+  $scope.item = Sims.get($stateParams.itemId);
 })
 
 .controller('AccountCtrl', function($scope) {
+  $scope.gpass = function(){
+      document.getElementById('inputPass').style.display = "block";
+      document.getElementById('submitPass').style.display = "block";
+      document.getElementById('gantiPass').style.display = "none";
+  };
+  $scope.spass = function(){
+      document.getElementById('inputPass').style.display = "none";
+      document.getElementById('submitPass').style.display = "none";
+      document.getElementById('gantiPass').style.display = "block";
+  };
+  $scope.ghp = function(){
+      document.getElementById('inputHP').style.display = "block";
+      document.getElementById('submitHP').style.display = "block";
+      document.getElementById('gantiHP').style.display = "none";
+  };
+  $scope.shp = function(){
+      document.getElementById('inputHP').style.display = "none";
+      document.getElementById('submitHP').style.display = "none";
+      document.getElementById('gantiHP').style.display = "block";
+  };
 })
 
 .controller('SplashCtrl', function($scope) {
+})
+
+.controller('MyCtrl', function($scope,Stnks, Sims) {
+  $scope.groups = [];
+  /*for (var i=0; i<10; i++) {
+    $scope.groups[i] = {
+      name: i,
+      items: []
+    };
+    for (var j=0; j<3; j++) {
+      $scope.groups[i].items.push(i + '-' + j);
+    }
+  }*/
+  $scope.groups[0]={
+      name: "STNK",
+      items: Stnks.all()
+  };
+
+  $scope.groups[1]={
+      name: "SIM",
+      items: Sims.all()
+  };
+   
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+  
+})
+.controller('subfoot', function($scope) {
+  $scope.showNoSTNK = function() {
+    document.getElementById('nostnk').style.display = "block";
+  };
+  $scope.showNoSIM = function() {
+    document.getElementById('nosim').style.display = "block";
+  };
+  $scope.simpanNoSTNK = function(){
+    // menyimpan nomor stnk
+    document.getElementById('nostnk').style.display = "none";
+  };
+  $scope.simpanNoSIM = function(){
+    // menyimpan nomor sim
+    document.getElementById('nosim').style.display = "none";
+  };
 });
 
 function slideCtrl($scope, $ionicSlideBoxDelegate) {
@@ -147,3 +227,6 @@ function slideCtrl($scope, $ionicSlideBoxDelegate) {
   };
   window.FX = FX;
 }
+
+
+
