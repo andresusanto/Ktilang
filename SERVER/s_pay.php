@@ -43,7 +43,7 @@ request token = '.$tokenResultParams["token"];
         // make the docs request.
         $urlAPI = OAUTH_HOST.'/TemanDev/rest/uPointGenerate/';
         $opt = array(CURLOPT_HTTPHEADER=>array('Content-Type: application/json'));
-        $body = '{"upoint":{"phoneNumber":"081215992230","trxID":"20141007151900","amount":"0","item":"123","callbackURL":"http://google.com","miscellaneous":"Tes uPointGenerate"}}';        
+        $body = '{"upoint":{"phoneNumber":"081215992230","trxID":"20141007151900","amount":"0","item":"TAI KUCING","callbackURL":"http://google.com","miscellaneous":"Tes uPointGenerate"}}';        
         $request = new OAuthRequester($urlAPI,'POST',$tokenResultParams,$body);
         echo 'execute api..
 ';
