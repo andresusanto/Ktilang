@@ -1,16 +1,16 @@
-<ion-view title="{{tilang.nomorK}}">
+<ion-view title="{{tilang.id}}" ng-controller="TilangDetailCtrl">
   <ion-content has-header="true" padding="true">
   	<div id="detailTilang">
-  		<h4>Nomor Tilang:</h4>
-  		<h4>Nomor Kendaraan:</h4>
-  		<h4>Nomor Waktu Tilang:</h4>
-  		<h4>Nomor Tempat Tilang:</h4>
-  		<h4>Nomor Wilayah Tilang:</h4>
+  		<h4>Nomor Tilang: <span class='bold'>{{tilang.id}}</span></h4>
+  		<h4>Nomor Kendaraan: <span class='bold'>{{tilang.nomorK}}</span></h4>
+  		<h4>Nomor Waktu Tilang: <span class='bold'>{{tilang.waktuT}}</span></h4>
+  		<h4>Nomor Tempat Tilang: <span class='bold'>{{tilang.tempatT}}</span></h4>
+  		<h4>Nomor Wilayah Tilang: <span class='bold'>{{tilang.wilayahT}}</span></h4>
   	</div>
   	<div id="pasalTilang">
-  		
-
-  		 <button  class="bot" ng-click="submit()">Submit</button>
+  		<h2>Nomor Pasal</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ducimus voluptatum ab in sit vitae. Ea voluptas vel earum sed quibusdam nihil pariatur fugit doloremque tenetur? Repudiandae porro voluptas accusantium? </p>
+  		 <button  ng-click="bayar()">Bayar</button>
   	</div>
   </ion-content>
 </ion-view>

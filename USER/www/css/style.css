@@ -1,4 +1,10 @@
-/* Empty. Add your own CSS if5 you like */
+/* Empty. Add your own CSS if5 you like 
+
+ai@bestapps.id
+[nomor kelomok]
+
+*/
+
 body, html, ion-slide{
 	height: 100%;
 	width: 100%;
@@ -38,9 +44,7 @@ background-repeat: no-repeat;
 	background-size: 400vw 100vh;
 }
 
-.reg h1{
-	z-index: 1;
-}
+
 
 img{
 	border: none;
@@ -129,6 +133,14 @@ img{
 	background-color: rgb(237,50,55) !important;
 }
 
+.bar.bar-stable .title{
+	color: #fff !important;
+}
+
+.bar-stable .button{
+	color: #fff !important;
+}
+
 .tabs{
 	background: rgb(237,50,55) !important;
 }
@@ -156,16 +168,53 @@ img{
 	width: 10vw;
 } 
 
+#detailTilang{
+	padding: 1vw 5vw;
+}
+
+.bold{
+	font-weight: bolder;
+}
+
+#pasalTilang{
+	position: relative;
+	height: 100%;
+	background: rgb(237,50,55);
+	text-align: center;
+	padding: 5vw;
+	color: #fff;
+}
+
+#pasalTilang h2{
+	color: #fff;
+}
+
 #pasalTilang button{
 	background: none;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: white;
 	border: white solid medium;
-	position: absolute;
-	left: 25vw;
-	width: 50vw;
 	height: 40px;
 	border-radius: 10px;
 	bottom: 20vh;
+	margin-top: 5vh;
+}
+
+.loading{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.loader{
+	background: url("../img/loader.gif");
+	background-size: 100% 100%;
+	width: 20vw;
+	height: 20vw;
+	margin-left: 40vw;
+	margin-top: 35vh;
 }
