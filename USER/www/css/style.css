@@ -78,7 +78,7 @@ img{
 
 .reg .form {
 	position: absolute;
-	top: 40vh;
+	top: 35vh;
 	left: 10vw;
 	width: 80vw;
 	color: white;
@@ -278,7 +278,7 @@ img{
 }
 
 .inpbar input{
-	width: 75%;
+	width: 37%;
 	display: inline-block;
 	border: 2px solid rgb(237,50,55);
 	padding: 5px;
