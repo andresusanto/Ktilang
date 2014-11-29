@@ -1,0 +1,56 @@
+<ion-view title="splash-begin" ng-controller="slideCtrl">
+  <ion-content class="" >
+    <ion-slide-box class="fullscreen" on-slide-changed="slideHasChanged($index)">
+    <ion-slide>
+      <div class="reg first">
+        <div class="icon"></div>
+        <button class="top" ng-click="toSlide(3)">Login</button>
+        <button class="bot" ng-click="toSlide(2)">Registrasi</button>
+    </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="reg second">
+        <div class="icon"></div>
+        <div class="desc">
+          <p>
+            Katilang adalah sebuah aplikasi tilang online yang memudahkan bagi pengguna jalan raya dan Polisi dalam menyelesaikan transaksi pembayaran denda sehingga lebih aman, nyaman dan efisien
+          </p>
+        </div>
+        <button class="top" ng-click="toSlide(3)">Login</button>
+        <button class="bot" ng-click="toSlide(2)">Registrasi</button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="reg third">
+        <div class="icon"></div>
+        <div class="form">
+          <p>
+            Masukkan data anda untuk masuk ke K-Tilang
+          </p>
+          <input type="text" placeholder="Username"></input>
+          <input type="text" placeholder="Password"></input>
+          <input type="text" placeholder="Nomor HP"></input>
+        </div>
+        <button  class="bot" ng-click="submit()">Submit</button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="reg fourth">
+        <div class="icon"></div>
+        <div class="form">
+          <p>
+            Masukkan username dan password untuk login
+          </p>
+          <input type="text" placeholder="Username"></input>
+          <input type="text" placeholder="Password"></input>
+        </div>
+        <button  class="bot" ng-click="login()">Login</button>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  </ion-content>
+</ion-view>
+
+<script type="text/javascript">
+  function 
+</script>
