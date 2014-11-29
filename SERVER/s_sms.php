@@ -16,8 +16,6 @@ define("ACCESS_TOKEN_URL", OAUTH_HOST."/TemanDev/rest/AccessToken/");
  
 //  Init the OAuthStore
 
-echo 'anjing';
-
 $options = array(
 'consumer_key' => CONSUMER_KEY,
 'consumer_secret' => CONSUMER_SECRET,
@@ -49,7 +47,7 @@ try
 	
 	$urlAPI = OAUTH_HOST.'/TemanDev/rest/sendSMS/';
 	$opt = array(CURLOPT_HTTPHEADER=>array('Content-Type: application/json'));
-	$body = '{"sendSMS":{"pinRequestID":"1","pinDestAddress":"6281320599744","pinMessageBody":"KETILANG LU BRO!!","pinShortCode":"9147"}}';        
+	$body = '{"sendSMS":{"pinRequestID":"1","pinDestAddress":"628568906325","pinMessageBody":"KETILANG LU BRO!!","pinShortCode":"9147"}}';        
 	$request = new OAuthRequester($urlAPI,'POST',$tokenResultParams,$body);
 	echo 'execute api..';
 	
