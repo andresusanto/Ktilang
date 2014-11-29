@@ -2,6 +2,7 @@
       The nav bar that will be updated as we navigate between views.
     -->
     <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <img class="toplogo "src="../img/logo-onlyshadow.png">
       <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
         Back
       </ion-nav-back-button>
@@ -12,23 +13,23 @@
   Each tab's child <ion-nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-icon redbg">
+<ion-tabs class="tabs-icon">
 
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Tilang" icon="icon ion-home icon-white" href="#/tab/tilang">
+  <ion-tab title="Tilang" icon="icon ion-android-inbox icon-white" href="#/tab/tilang">
     <ion-nav-view name="tab-tilang"></ion-nav-view>
   </ion-tab>
 
 
   <!-- Friends Tab -->
-  <ion-tab title="Friends" icon="icon ion-heart icon-white" href="#/tab/friends">
-    <ion-nav-view name="tab-friends"></ion-nav-view>
+  <ion-tab title="Surat" icon="icon ion-android-note icon-white" href="#/tab/surat">
+    <ion-nav-view name="tab-surat"></ion-nav-view>
   </ion-tab>
 
 
   <!-- Account Tab -->
-  <ion-tab title="Account" icon="icon ion-gear-b icon-white" href="#/tab/account">
+  <ion-tab title="Account" icon="icon ion-android-social-user icon-white" href="#/tab/account">
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
 

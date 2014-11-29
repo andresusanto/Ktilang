@@ -157,8 +157,9 @@ img{
 	margin: 3vh 0;
 }
 
-.item > h2{
+.item  h2{
 	font-weight: bold;
+	font-size: 200%;
 }
 
 .icon-white{
@@ -314,4 +315,41 @@ img{
 	border: 2px solid rgb(237,50,55);
 	padding: 1vw;
 	margin-bottom: 1vw;
+}/* Empty. Add your own CSS if you like */
+
+#tilang{
+	text-align: center;
+}
+
+#tilang label{
+	font-size: 150%;
+}
+#tilang .input{
+	border: 2px solid rgb(237,50,55);
+	padding: 1vw;
+	margin-bottom: 3vw;text-align: center;
+}
+
+#tilang button{
+	margin-top: 5px;
+	border: 5px solid rgb(237,50,55);
+	background: rgb(237,50,55);
+	border-radius: 5px;
+	font-size: 200%;
+	color: #fff;
+}
+
+.item-select{
+	border: 2px solid rgb(237,50,55);
+}
+
+.item-select option, .item-select select{
+	border-left: 2px solid rgb(237,50,55);
+	border-right: 0px;
+	text-align: right;
+}
+
+.item.item-stable {
+	border-color: rgb(237,50,55) !important;
+	background-color: #fff !important;
 }

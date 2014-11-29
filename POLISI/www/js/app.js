@@ -29,27 +29,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-
-    // setup an abstract state for the splash directive
-    .state('splash', {
-      url: "/splash",
-      abstract: true,
-      templateUrl: "templates/splash.html"
-    })
-
-    // Each splash has its own nav history stack:
-
-    .state('splash.begin', {
-      url: '/begin',
-      views: {
-        'splash-begin': {
-          templateUrl: 'templates/splash.html',
-          controller: 'SplashCtrl'
-        }
-      }
-    })
-
-
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
@@ -58,53 +37,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     // Each tab has its own nav history stack:
-    .state('tab.tilang', {
-      url: '/tilang',
+
+    .state('tab.dash', {
+      url: '/dash',
       views: {
-        'tab-tilang': {
-          templateUrl: 'templates/tab-tilang.html',
-          controller: 'TilangCtrl'
-        }
-      }
-    })
-    
-    .state('tab.tilang-detail', {
-      url: '/tilang/:tilangId',
-      views: {
-        'tab-tilang': {
-          templateUrl: 'templates/tilang-detail.html',
-          controller: 'TilangDetailCtrl'
+        'tab-dash': {
+          templateUrl: 'templates/tab-dash.html',
+          controller: 'DashCtrl'
         }
       }
     })
 
-    .state('tab.surat', {
-      url: '/surat',
+    .state('tab.friends', {
+      url: '/friends',
       views: {
-        'tab-surat': {
-          templateUrl: 'templates/tab-surat.html',
+        'tab-friends': {
+          templateUrl: 'templates/tab-friends.html',
           controller: 'FriendsCtrl'
         }
       }
     })
-    .state('tab.friend-detail-stnk', {
-      url: '/surat/STNK/:itemId',
+    .state('tab.friend-detail', {
+      url: '/friend/:friendId',
       views: {
-        'tab-surat': {
-          templateUrl: 'templates/stnk-detail.html',
-          controller: 'STNKDetailCtrl'
+        'tab-friends': {
+          templateUrl: 'templates/friend-detail.html',
+          controller: 'FriendDetailCtrl'
         }
       }
     })
-    .state('tab.friend-detail-sim', {
-      url: '/surat/SIM/:itemId',
-      views: {
-        'tab-surat': {
-          templateUrl: 'templates/sim-detail.html',
-          controller: 'SIMDetailCtrl'
-        }
-      }
-    })
+
     .state('tab.account', {
       url: '/account',
       views: {
@@ -113,29 +75,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'AccountCtrl'
         }
       }
-    })
-
-
-    //gapake abstract
-    .state('pembayaran', {
-      url: "/pembayaran",
-      abstract: true,
-      templateUrl: "templates/pembayaran.html"
-    })
-    .state('pembayaran.begin', {
-      url: '/begin',
-      views: {
-        'pembayaran-begin': {
-          templateUrl: 'templates/pembayaran.html',
-          controller: 'BayarCtrl'
-        }
-      }
-    })
-    ;
+    });
 
   // if none of the above states are matched, use this as the fallback
-  //$urlRouterProvider.otherwise('/tab/dash');
-  $urlRouterProvider.otherwise('/splash/begin');
+  $urlRouterProvider.otherwise('/tab/dash');
 
 });
 
