@@ -6,6 +6,25 @@ body, html, ion-slide{
 	margin: 0;
 }
 
+input[type="range"] {
+display: inline-block;
+overflow: hidden;
+margin-top: 5px;
+margin-bottom: 5px;
+padding-right: 2px;
+padding-left: 1px;
+width: auto;
+/height: 35px;/
+min-height: 35px;
+outline: none;
+/background: linear-gradient(to right, #cccccc 0%, #cccccc 100%);/
+background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
+background-position: center;
+background-size: 99% 4px;
+background-repeat: no-repeat;
+-webkit-appearance: none; 
+}
+
 .reg{
 	height: 100vh;
 	width: 100vw;
@@ -136,3 +155,17 @@ img{
 	margin: auto;
 	width: 10vw;
 } 
+
+#pasalTilang button{
+	background: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	border: white solid medium;
+	position: absolute;
+	left: 25vw;
+	width: 50vw;
+	height: 40px;
+	border-radius: 10px;
+	bottom: 20vh;
+}
