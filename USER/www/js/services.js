@@ -26,8 +26,8 @@ angular.module('starter.services', [])
 })
 .factory('Tilangs', function(){
   var tilangs = [
-   { id:0, nomorK: 'Ag 1230 ho'}, 
-   { id:1, nomorK: 'Ag 130 ho'}
+   { id:0, nomorK: 'Ag 1230 ho', waktuT: '12:22 12 November 2014', tempatT: 'Simpang Dago', wilayahT:'Bandung Kota', nomorP:'12/1'}, 
+   { id:0, nomorK: 'Ag 1210 he', waktuT: '10:12 10 Oktober 2014', tempatT: 'Simpang Lima Gumul', wilayahT:'Kediri Kota', nomorP:'12/1'}
   ];
 
   return {
