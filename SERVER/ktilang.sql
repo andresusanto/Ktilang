@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2014 at 04:49 AM
+-- Generation Time: Nov 30, 2014 at 05:19 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -253,11 +253,7 @@ CREATE TABLE IF NOT EXISTS `user_sim` (
 --
 
 INSERT INTO `user_sim` (`username`, `no_sim`) VALUES
-('tony', '1111111111'),
-('tony', '2222222222'),
-('lingshit', '3333333333'),
-('kaito', '5555555555'),
-('kaito', '9210153401');
+('tony', '1111111111');
 
 -- --------------------------------------------------------
 
@@ -277,11 +273,7 @@ CREATE TABLE IF NOT EXISTS `user_stnk` (
 --
 
 INSERT INTO `user_stnk` (`username`, `no_stnk`) VALUES
-('tony', 'AA-1111-AA'),
-('tony', 'BB-2222-BB'),
-('lingshit', 'CC-3333-CC'),
-('kaito', 'EE-5555-EE'),
-('kaito', 'KT-1412-TK');
+('tony', 'AA-1111-AA');
 
 --
 -- Constraints for dumped tables
