@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2014 at 11:21 AM
+-- Generation Time: Nov 30, 2014 at 04:11 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -100,6 +100,14 @@ CREATE TABLE IF NOT EXISTS `polisi` (
   PRIMARY KEY (`no_anggota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `polisi`
+--
+
+INSERT INTO `polisi` (`no_anggota`, `password`, `nama`, `pangkat`, `kesatuan`) VALUES
+('12345', '12341234123412341234123412341234', 'Police', 'Brigadir', 'Satpol PP'),
+('b13m-4019-ma32', '12341234123412341234123412341234', 'Jajat Sudrajat', 'Kapolda', 'Metro Jaya');
+
 -- --------------------------------------------------------
 
 --
@@ -108,19 +116,29 @@ CREATE TABLE IF NOT EXISTS `polisi` (
 
 CREATE TABLE IF NOT EXISTS `sim` (
   `no_sim` varchar(15) NOT NULL,
-  `username` varchar(50) NOT NULL,
   `nama` varchar(40) NOT NULL,
   `alamat` text NOT NULL,
   `tempat_lahir` varchar(40) NOT NULL,
   `tanggal_lahir` date NOT NULL,
-  `tinggi_badan` tinyint(4) NOT NULL,
+  `tinggi_badan` tinyint(4) unsigned NOT NULL,
   `pekerjaan` varchar(30) NOT NULL,
   `jenis_kelamin` char(1) NOT NULL,
   `wilayah` varchar(30) NOT NULL,
   `golongan` varchar(5) NOT NULL,
-  PRIMARY KEY (`no_sim`,`username`),
-  KEY `username` (`username`)
+  PRIMARY KEY (`no_sim`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sim`
+--
+
+INSERT INTO `sim` (`no_sim`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `tinggi_badan`, `pekerjaan`, `jenis_kelamin`, `wilayah`, `golongan`) VALUES
+('111111111111', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-17', 170, 'Orang Kaya', 'P', 'Metro Jaya', 'C'),
+('222222222222', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-19', 127, 'Org Kaya', 'P', 'Metro Jaya', 'A'),
+('333333333333', 'lingshitG', 'Jl. Asem no. 5', 'Jakarta', '2014-11-03', 127, 'Koplak', 'P', 'Metro Jaya', 'C'),
+('444444444444', 'lingshitG', 'Jl. Kegantengan no 5', 'Jakarta', '2014-11-17', 127, 'Koplak', 'P', 'Metro Jaya', 'A'),
+('555555555555', 'anakilang', 'Jl Kucing no. 3', 'Jkt', '2014-11-10', 127, 'Pedagang', 'W', 'Jakbar', 'C'),
+('921015340100', 'Bagaskara Pramudita', 'Persada Asri A-16\r\nRT.33 RW.08 Balowerti\r\nKota Kediri', 'Surabaya', '1994-10-24', 165, 'Mahasiswa', 'P', 'Jatim', 'C');
 
 -- --------------------------------------------------------
 
@@ -130,7 +148,6 @@ CREATE TABLE IF NOT EXISTS `sim` (
 
 CREATE TABLE IF NOT EXISTS `stnk` (
   `no_stnk` varchar(15) NOT NULL,
-  `username` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` tinytext NOT NULL,
   `merk` varchar(30) NOT NULL,
@@ -148,9 +165,20 @@ CREATE TABLE IF NOT EXISTS `stnk` (
   `tahun_registrasi` date NOT NULL,
   `no_bpkb` varchar(30) NOT NULL,
   `berlaku_sampai` date NOT NULL,
-  PRIMARY KEY (`no_stnk`,`username`),
-  KEY `username` (`username`)
+  PRIMARY KEY (`no_stnk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stnk`
+--
+
+INSERT INTO `stnk` (`no_stnk`, `nama`, `alamat`, `merk`, `tipe`, `jenis`, `model`, `tahun_pembuatan`, `tempat_pembuatan`, `warna_kendaraan`, `isi_silinder`, `no_rangka`, `no_mesin`, `bahan_bakar`, `warna_tnkb`, `tahun_registrasi`, `no_bpkb`, `berlaku_sampai`) VALUES
+('111111111111111', 'tonyG', 'Jl.Kegantengan no. 5', 'A', 'A', 'Motor', 'A', '2014-11-10', 'Cikampret', 'Merah', '2', '3', '1', 'B', 'H', '2014-11-10', '12131231', '2014-11-26'),
+('222222222222222', 'tonyG', 'Jl. a', 'a', 'a', 'Mobil', 'a', '2014-11-21', '1', '3', '2', '4', '5', 'S', 'K', '2014-11-25', '31312321312213', '2014-11-25'),
+('333333333333333', 'lingshitG', 'eqewqeqwe', 'qwee', 'wqqwewq', 'Motor', 'cxzc', '2014-11-25', 'qwwewqe', 'asdasdasd', 'qwewqewqd', 'asdasdsa', 'asdsadd', 'B', 'H', '2014-11-25', '1231242116', '2014-11-18'),
+('444444444444444', 'lingshitG', 'qwwqqwasdasd', 'qwewqasd', 'qwewqeqwdsa', 'Mobil', 'qwewqeqwdas', '2014-11-04', 'qwewqeqdas', 'qweqdasd', 'zxxzczxc', 'qweqwdsa', 'asdasd', 'S', 'H', '2014-11-26', '124213213213', '2014-11-27'),
+('555555555555555', 'anakilang', 'qwewqewqewqew', 'qweqewqewqe', 'qwewqewqe', 'Mobil', 'qweewqwqe', '2014-11-25', 'qweqweqw', 'asdasdas', 'zczcxz', 'qweqwe', 'asdsad', 'B', 'H', '2014-11-25', 'qwewqwqe', '2014-11-05'),
+('AG-5425-BQ', 'Bagaskara Pramudita', 'Perum Persada Sari A-16\r\nKec. Kota Kediri', 'Honda', 'NC11C-1C-AT-Scoopy', 'Sepeda Motor', 'Sepeda Motor', '2011-05-04', 'Jawa Timur', 'Violet', '00108 CC', 'MH1JF6112BK187062', 'JF61E1185477', 'B', 'H', '2011-05-04', 'H11018513', '2016-05-04');
 
 -- --------------------------------------------------------
 
@@ -160,18 +188,25 @@ CREATE TABLE IF NOT EXISTS `stnk` (
 
 CREATE TABLE IF NOT EXISTS `surat_tilang` (
   `no_tilang` varchar(10) NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `no_stnk` varchar(15) NOT NULL,
   `no_anggota` varchar(50) NOT NULL,
   `waktu_tilang` datetime NOT NULL,
   `wilayah_tilang` varchar(30) NOT NULL,
   `tempat_tilang` varchar(50) NOT NULL,
   `pasal_pelanggaran` varchar(25) NOT NULL,
   `status_denda` char(1) NOT NULL,
-  PRIMARY KEY (`no_tilang`,`username`,`no_anggota`,`pasal_pelanggaran`),
-  KEY `username` (`username`),
+  PRIMARY KEY (`no_tilang`,`no_stnk`,`no_anggota`,`pasal_pelanggaran`),
   KEY `no_anggota` (`no_anggota`),
-  KEY `pasal_pelanggaran` (`pasal_pelanggaran`)
+  KEY `pasal_pelanggaran` (`pasal_pelanggaran`),
+  KEY `no_stnk` (`no_stnk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `surat_tilang`
+--
+
+INSERT INTO `surat_tilang` (`no_tilang`, `no_stnk`, `no_anggota`, `waktu_tilang`, `wilayah_tilang`, `tempat_tilang`, `pasal_pelanggaran`, `status_denda`) VALUES
+('54321', '111111111111111', '12345', '2014-11-13 08:35:18', 'qwedaszdax', 'qweqdsadsasd', '276', 'P');
 
 -- --------------------------------------------------------
 
@@ -188,28 +223,84 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `no_hp`, `reg_token`) VALUES
+('baspram', 'amkoamkoamkoamkoamkoamkoamkoamko', '0819102390190', 99),
+('lingshit', '55555555555555555555555555555555', '123455432112345', 1),
+('pret', '55555555555555555555555555555555', '123455432112345', 1231235),
+('tony', '11111111111111111111111111111111', '085717566229', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_sim`
+--
+
+CREATE TABLE IF NOT EXISTS `user_sim` (
+  `username` varchar(50) NOT NULL,
+  `no_sim` varchar(15) NOT NULL,
+  PRIMARY KEY (`username`,`no_sim`),
+  KEY `no_sim` (`no_sim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_sim`
+--
+
+INSERT INTO `user_sim` (`username`, `no_sim`) VALUES
+('tony', '111111111111'),
+('tony', '222222222222');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_stnk`
+--
+
+CREATE TABLE IF NOT EXISTS `user_stnk` (
+  `username` varchar(50) NOT NULL,
+  `no_stnk` varchar(15) NOT NULL,
+  PRIMARY KEY (`username`,`no_stnk`),
+  KEY `no_stnk` (`no_stnk`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_stnk`
+--
+
+INSERT INTO `user_stnk` (`username`, `no_stnk`) VALUES
+('tony', '111111111111111'),
+('tony', '222222222222222'),
+('lingshit', '333333333333333'),
+('lingshit', '444444444444444');
+
+--
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `sim`
---
-ALTER TABLE `sim`
-  ADD CONSTRAINT `sim_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `stnk`
---
-ALTER TABLE `stnk`
-  ADD CONSTRAINT `stnk_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `surat_tilang`
 --
 ALTER TABLE `surat_tilang`
+  ADD CONSTRAINT `surat_tilang_ibfk_2` FOREIGN KEY (`no_anggota`) REFERENCES `polisi` (`no_anggota`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `surat_tilang_ibfk_3` FOREIGN KEY (`pasal_pelanggaran`) REFERENCES `pelanggaran` (`pasal_pelanggaran`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `surat_tilang_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `surat_tilang_ibfk_2` FOREIGN KEY (`no_anggota`) REFERENCES `polisi` (`no_anggota`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `surat_tilang_ibfk_4` FOREIGN KEY (`no_stnk`) REFERENCES `stnk` (`no_stnk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user_sim`
+--
+ALTER TABLE `user_sim`
+  ADD CONSTRAINT `user_sim_ibfk_1` FOREIGN KEY (`no_sim`) REFERENCES `sim` (`no_sim`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_sim_ibfk_2` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user_stnk`
+--
+ALTER TABLE `user_stnk`
+  ADD CONSTRAINT `user_stnk_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_stnk_ibfk_2` FOREIGN KEY (`no_stnk`) REFERENCES `stnk` (`no_stnk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
