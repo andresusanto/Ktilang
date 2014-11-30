@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2014 at 04:11 AM
+-- Generation Time: Nov 30, 2014 at 04:49 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -133,12 +133,13 @@ CREATE TABLE IF NOT EXISTS `sim` (
 --
 
 INSERT INTO `sim` (`no_sim`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `tinggi_badan`, `pekerjaan`, `jenis_kelamin`, `wilayah`, `golongan`) VALUES
-('111111111111', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-17', 170, 'Orang Kaya', 'P', 'Metro Jaya', 'C'),
-('222222222222', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-19', 127, 'Org Kaya', 'P', 'Metro Jaya', 'A'),
-('333333333333', 'lingshitG', 'Jl. Asem no. 5', 'Jakarta', '2014-11-03', 127, 'Koplak', 'P', 'Metro Jaya', 'C'),
-('444444444444', 'lingshitG', 'Jl. Kegantengan no 5', 'Jakarta', '2014-11-17', 127, 'Koplak', 'P', 'Metro Jaya', 'A'),
-('555555555555', 'anakilang', 'Jl Kucing no. 3', 'Jkt', '2014-11-10', 127, 'Pedagang', 'W', 'Jakbar', 'C'),
-('921015340100', 'Bagaskara Pramudita', 'Persada Asri A-16\r\nRT.33 RW.08 Balowerti\r\nKota Kediri', 'Surabaya', '1994-10-24', 165, 'Mahasiswa', 'P', 'Jatim', 'C');
+('1111111111', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-17', 170, 'Orang Kaya', 'P', 'Metro Jaya', 'C'),
+('2222222222', 'tonyG', 'Jl. Kegantengan no. 5', 'Jakarta', '2014-11-19', 127, 'Org Kaya', 'P', 'Metro Jaya', 'A'),
+('3333333333', 'lingshitG', 'Jl. Asem no. 5', 'Jakarta', '2014-11-03', 127, 'Koplak', 'P', 'Metro Jaya', 'C'),
+('4444444444', 'lingshitG', 'Jl. Kegantengan no 5', 'Jakarta', '2014-11-17', 127, 'Koplak', 'P', 'Metro Jaya', 'A'),
+('5555555555', 'anakilang', 'Jl Kucing no. 3', 'Jkt', '2014-11-10', 127, 'Pedagang', 'W', 'Jakbar', 'C'),
+('9210153400', 'Bagaskara Pramudita', 'Persada Asri A-16\r\nRT.33 RW.08 Balowerti\r\nKota Kediri', 'Surabaya', '1994-10-24', 165, 'Mahasiswa', 'P', 'Jatim', 'C'),
+('9210153401', 'Tony', 'Jl. Kerajinan no. 19\r\nRT 14 RW 10\r\nJakarta Barat', 'Jakarta', '2014-11-02', 172, 'Mahasiswa', 'P', 'Metro Jaya', 'C');
 
 -- --------------------------------------------------------
 
@@ -173,12 +174,13 @@ CREATE TABLE IF NOT EXISTS `stnk` (
 --
 
 INSERT INTO `stnk` (`no_stnk`, `nama`, `alamat`, `merk`, `tipe`, `jenis`, `model`, `tahun_pembuatan`, `tempat_pembuatan`, `warna_kendaraan`, `isi_silinder`, `no_rangka`, `no_mesin`, `bahan_bakar`, `warna_tnkb`, `tahun_registrasi`, `no_bpkb`, `berlaku_sampai`) VALUES
-('111111111111111', 'tonyG', 'Jl.Kegantengan no. 5', 'A', 'A', 'Motor', 'A', '2014-11-10', 'Cikampret', 'Merah', '2', '3', '1', 'B', 'H', '2014-11-10', '12131231', '2014-11-26'),
-('222222222222222', 'tonyG', 'Jl. a', 'a', 'a', 'Mobil', 'a', '2014-11-21', '1', '3', '2', '4', '5', 'S', 'K', '2014-11-25', '31312321312213', '2014-11-25'),
-('333333333333333', 'lingshitG', 'eqewqeqwe', 'qwee', 'wqqwewq', 'Motor', 'cxzc', '2014-11-25', 'qwwewqe', 'asdasdasd', 'qwewqewqd', 'asdasdsa', 'asdsadd', 'B', 'H', '2014-11-25', '1231242116', '2014-11-18'),
-('444444444444444', 'lingshitG', 'qwwqqwasdasd', 'qwewqasd', 'qwewqeqwdsa', 'Mobil', 'qwewqeqwdas', '2014-11-04', 'qwewqeqdas', 'qweqdasd', 'zxxzczxc', 'qweqwdsa', 'asdasd', 'S', 'H', '2014-11-26', '124213213213', '2014-11-27'),
-('555555555555555', 'anakilang', 'qwewqewqewqew', 'qweqewqewqe', 'qwewqewqe', 'Mobil', 'qweewqwqe', '2014-11-25', 'qweqweqw', 'asdasdas', 'zczcxz', 'qweqwe', 'asdsad', 'B', 'H', '2014-11-25', 'qwewqwqe', '2014-11-05'),
-('AG-5425-BQ', 'Bagaskara Pramudita', 'Perum Persada Sari A-16\r\nKec. Kota Kediri', 'Honda', 'NC11C-1C-AT-Scoopy', 'Sepeda Motor', 'Sepeda Motor', '2011-05-04', 'Jawa Timur', 'Violet', '00108 CC', 'MH1JF6112BK187062', 'JF61E1185477', 'B', 'H', '2011-05-04', 'H11018513', '2016-05-04');
+('AA-1111-AA', 'tonyG', 'Jl.Kegantengan no. 5', 'A', 'A', 'Motor', 'A', '2014-11-10', 'Cikampret', 'Merah', '2', '3', '1', 'B', 'H', '2014-11-10', '12131231', '2014-11-26'),
+('AG-5425-BQ', 'Bagaskara Pramudita', 'Perum Persada Sari A-16\r\nKec. Kota Kediri', 'Honda', 'NC11C-1C-AT-Scoopy', 'Sepeda Motor', 'Sepeda Motor', '2011-05-04', 'Jawa Timur', 'Violet', '00108 CC', 'MH1JF6112BK187062', 'JF61E1185477', 'B', 'H', '2011-05-04', 'H11018513', '2016-05-04'),
+('BB-2222-BB', 'tonyG', 'Jl. a', 'a', 'a', 'Mobil', 'a', '2014-11-21', '1', '3', '2', '4', '5', 'S', 'K', '2014-11-25', '31312321312213', '2014-11-25'),
+('CC-3333-CC', 'lingshitG', 'eqewqeqwe', 'qwee', 'wqqwewq', 'Motor', 'cxzc', '2014-11-25', 'qwwewqe', 'asdasdasd', 'qwewqewqd', 'asdasdsa', 'asdsadd', 'B', 'H', '2014-11-25', '1231242116', '2014-11-18'),
+('DD-4444-DD', 'lingshitG', 'qwwqqwasdasd', 'qwewqasd', 'qwewqeqwdsa', 'Mobil', 'qwewqeqwdas', '2014-11-04', 'qwewqeqdas', 'qweqdasd', 'zxxzczxc', 'qweqwdsa', 'asdasd', 'S', 'H', '2014-11-26', '124213213213', '2014-11-27'),
+('EE-5555-EE', 'anakilang', 'qwewqewqewqew', 'qweqewqewqe', 'qwewqewqe', 'Mobil', 'qweewqwqe', '2014-11-25', 'qweqweqw', 'asdasdas', 'zczcxz', 'qweqwe', 'asdsad', 'B', 'H', '2014-11-25', 'qwewqwqe', '2014-11-05'),
+('KT-1412-TK', 'Tony', 'Jl. Kerajinan no. 19\r\nRT 14 RW 10\r\nJakarta Barat', 'Honda', 'Honda Jazz', 'Sepeda Motor', 'Sepeda Motor', '2014-11-10', 'Jakarta', 'Putih', '109029', '013901', '192381', 'B', 'H', '2014-11-17', '1292113132', '2019-11-11');
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `surat_tilang` (
 --
 
 INSERT INTO `surat_tilang` (`no_tilang`, `no_stnk`, `no_anggota`, `waktu_tilang`, `wilayah_tilang`, `tempat_tilang`, `pasal_pelanggaran`, `status_denda`) VALUES
-('54321', '111111111111111', '12345', '2014-11-13 08:35:18', 'qwedaszdax', 'qweqdsadsasd', '276', 'P');
+('1234-4321', 'AA-1111-AA', 'b13m-4019-ma32', '2014-11-20 02:12:21', 'Bandung', 'Jl. Cisitu Lama no. 33', '281', 'P');
 
 -- --------------------------------------------------------
 
@@ -228,6 +230,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`username`, `password`, `no_hp`, `reg_token`) VALUES
 ('baspram', 'amkoamkoamkoamkoamkoamkoamkoamko', '0819102390190', 99),
+('kaito', 'popopopopopopopopopopopopopopopo', '085717566229', 5),
 ('lingshit', '55555555555555555555555555555555', '123455432112345', 1),
 ('pret', '55555555555555555555555555555555', '123455432112345', 1231235),
 ('tony', '11111111111111111111111111111111', '085717566229', 1);
@@ -250,8 +253,11 @@ CREATE TABLE IF NOT EXISTS `user_sim` (
 --
 
 INSERT INTO `user_sim` (`username`, `no_sim`) VALUES
-('tony', '111111111111'),
-('tony', '222222222222');
+('tony', '1111111111'),
+('tony', '2222222222'),
+('lingshit', '3333333333'),
+('kaito', '5555555555'),
+('kaito', '9210153401');
 
 -- --------------------------------------------------------
 
@@ -271,10 +277,11 @@ CREATE TABLE IF NOT EXISTS `user_stnk` (
 --
 
 INSERT INTO `user_stnk` (`username`, `no_stnk`) VALUES
-('tony', '111111111111111'),
-('tony', '222222222222222'),
-('lingshit', '333333333333333'),
-('lingshit', '444444444444444');
+('tony', 'AA-1111-AA'),
+('tony', 'BB-2222-BB'),
+('lingshit', 'CC-3333-CC'),
+('kaito', 'EE-5555-EE'),
+('kaito', 'KT-1412-TK');
 
 --
 -- Constraints for dumped tables
