@@ -83,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-surat': {
           templateUrl: 'templates/tab-surat.html',
-          controller: 'FriendsCtrl'
+          controller: 'SuratCtrl'
         }
       }
     })

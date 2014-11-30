@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
 .controller('SplashCtrl', function($scope) {
 })
 
-.controller('MyCtrl', function($scope,Stnks, Sims) {
+.controller('SuratCtrl', function($scope,Stnks, Sims) {
   $scope.groups = [];
   /*for (var i=0; i<10; i++) {
     $scope.groups[i] = {

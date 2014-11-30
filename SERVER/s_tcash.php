@@ -2,8 +2,8 @@
 include_once "./library/OAuthStore.php";
 include_once "./library/OAuthRequester.php";
  
-define("CONSUMER_KEY", "YOUR CONSUMER KEY");
-define("CONSUMER_SECRET", "YOUR CONSUMER SECRET");
+define("CONSUMER_KEY", "bestapp157");
+define("CONSUMER_SECRET", "KPD7R");
 define("OAUTH_HOST", "http://sandbox.appprime.net");
 define("REQUEST_TOKEN_URL", OAUTH_HOST."/TemanDev/rest/RequestToken/");
 define("ACCESS_TOKEN_URL", OAUTH_HOST."/TemanDev/rest/AccessToken/");
@@ -42,15 +42,15 @@ try
         // make the docs request.
         $urlAPI = OAUTH_HOST.'/TemanDev/rest/tMoney/';
 		$opt = array(CURLOPT_HTTPHEADER=>array('Content-Type: application/json'));
-		$body = ' {"tmoney":{"invoiceNo":"DEL41143493","serviceID":"016","amount":"1000","returnURL":"http://devocsg.telkom.co.id:8001/wsSDP-1.0/sdp/xresponse","merchantCode":"195158400621"}}';
+		$body = ' {"tmoney":{"invoiceNo":"BabieLoeTodsSky","serviceID":"016","amount":"1000","returnURL":"http://devocsg.telkom.co.id:8001/wsSDP-1.0/sdp/xresponse","merchantCode":"195158400621"}}';
 		$request = new OAuthRequester($urlAPI,'POST',$tokenResultParams,$body);
 		echo 'execute api..';
-		$result = $request->doRequest2(0,$opt);
+		$result = $request->doRequest(0,$opt);
 		echo $result;
 		$a ="HTTP/1.1 302 Found Server: Apache-Coyote/1.1 Location: https://em.telkomdelima.com/jets-delima/WebCollection.action?MerchantCode=null&amp;InvoiceNo=DEL41143493 Content-Language: en-US Content-Length: 0 Date: Fri, 10 Oct 2014 09:00:28 GMT";
 		 
 		$hasil =explode(' ',$a);
  
-for($a=0;$a&lt;=30;$a++) { $potong=substr($hasil[$a], 0, 5); if($potong=="https") { $redirect = $hasil[$a]; } } header('Location: '.$redirect);  } catch(OAuthException2 $e) { echo "OAuthException:  " . $e->getMessage();
+for($a=0;$a<=30;$a++) { $potong=substr($hasil[$a], 0, 5); if($potong=="https") { $redirect = $hasil[$a]; } } header('Location: '.$redirect);  } catch(OAuthException2 $e) { echo "OAuthException:  " . $e->getMessage();
 var_dump($e);
 }

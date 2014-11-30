@@ -20,6 +20,7 @@ switch($metode)
 					{
 						for ($i=1;$i<=$data_post[0];$i++)
 							$dt[$i-1] = $data_post[$i];
+						
 						echo json_encode($dt);
 					}
 				}
@@ -42,7 +43,9 @@ switch($metode)
 						else
 						{
 							for ($i=1;$i<=$data_post[0];$i++)
+							{
 								$dt[$i-1] = $data_post[$i];
+							}
 							echo json_encode($dt);
 						}
 					}

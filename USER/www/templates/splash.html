@@ -27,11 +27,12 @@
           <p class="hide-on-keyboard-open">
             Masukkan data anda untuk masuk ke K-Tilang
           </p>
-          <input type="text" placeholder="Username"></input>
-          <input type="text" placeholder="Password"></input>
-          <input type="text" placeholder="Nomor HP"></input>
+          <input type="text" ng-model="reg.user" placeholder="Username"></input>
+          <input type="password" ng-model="reg.pass" placeholder="Password"></input>
+		  <input type="password" ng-model="reg.cpass" placeholder="Confirm Password"></input>
+		  <input type="text" ng-model="reg.hp" placeholder="Nomor HP"></input>
         </div>
-        <button  class="bot" ng-click="submit()">Submit</button>
+        <button class="bot" ng-click="submitreg()">Submit</button>
         <div id="loading_regist" class="loading">
           <div id="loader_regist" class="loader"></div>
         </div>
@@ -44,8 +45,8 @@
           <p class="hide-on-keyboard-open">
             Masukkan username dan password untuk login
           </p>
-          <input type="text" placeholder="Username"></input>
-          <input type="text" placeholder="Password"></input>
+          <input type="text" ng-model="log.user" placeholder="Username"></input>
+          <input type="password" ng-model="log.pass" placeholder="Password"></input>
         </div>
         <button  class="bot" ng-click="login()">Login</button>
         <div id="loading_login" class="loading">
